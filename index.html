@@ -3,18 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex Web</title>
+  <title>Pokédex Web Interactiva</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Fuente moderna desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Encabezado y buscador -->
   <header>
-    <h1>Pokédex</h1>
-    <input type="text" id="search-input" placeholder="Buscar Pokémon por nombre..." />
+    <div class="logo-container">
+      <div class="pokeball-icon"></div>
+      <h1>PokéDex</h1>
+    </div>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Buscar Pokémon por nombre..." autocomplete="off" />
+    </div>
   </header>
 
+  <!-- Grilla principal de Pokémon -->
   <main>
     <div id="pokemon-container" class="pokemon-grid"></div>
   </main>
+
+  <!-- Modal para ver detalles y estadísticas -->
+  <div id="modal-container" class="modal-overlay hidden">
+    <div class="modal-card" id="modal-card">
+      <button id="close-modal" class="close-btn">&times;</button>
+      <div id="modal-body">
+        <!-- El contenido detallado se inserta desde JS -->
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
